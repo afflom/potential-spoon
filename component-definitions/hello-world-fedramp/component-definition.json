@@ -1,0 +1,58 @@
+{
+  "component-definition": {
+    "uuid": "30b6f296-0594-4e33-98e1-c92c4958f541",
+    "metadata": {
+      "title": "Hello World FedRAMP Component Definition",
+      "last-modified": "2023-03-20T22:39:30.716548+00:00",
+      "version": "1.0.0",
+      "oscal-version": "1.0.2"
+    },
+    "components": [
+      {
+        "uuid": "e1fc61b0-d48b-4f9d-986e-08f90bf33a59",
+        "type": "service",
+        "title": "This System",
+        "description": "Hello World Application",
+        "props": [
+          {
+            "name": "Rule_Id",
+            "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "Test-rule_002",
+            "remarks": "rule_set_0"
+          },
+          {
+            "name": "Rule_Description",
+            "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "Ensure hello-world disables inactive accounts",
+            "remarks": "rule_set_0"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "a3b95d4b-4723-4639-837b-5848025a45ae",
+            "source": "profiles/fedramp_rev4_moderate/profile.json",
+            "description": "This is a partial implementation of the FedRAMP Moderate profile, focusing on the control enhancement AC-2 (3).",
+            "implemented-requirements": [
+              {
+                "uuid": "6f307672-3b3a-4b43-8d12-b3bbbbd3dae0",
+                "control-id": "ac-2.3",
+                "description": "",
+                "props": [
+                  {
+                    "name": "Rule_Id",
+                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd",
+                    "value": "Test-rule_002"
+                  },
+                  {
+                    "name": "implementation-status",
+                    "value": "partial"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
